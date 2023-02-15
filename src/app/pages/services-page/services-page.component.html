@@ -1,0 +1,46 @@
+
+
+<nz-row [nzGutter]="[24,28]">
+  <nz-col [nzSpan]="24">
+    <div class="flex-column">
+      <div class="filter-search">
+        <nz-select ngModel="lucy" [(ngModel)]="optionSearch" [nzSize]="sizeBt">
+          <nz-option nzValue="all" nzLabel="All"></nz-option>
+          <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+          <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+        </nz-select>
+      </div>
+      <div class="input-search" >
+        <nz-input-group [nzSuffix]="suffixIconSearch" [nzSize]="sizeBt" >
+          <input type="text" nz-input placeholder="input search text" />
+        </nz-input-group>
+        <ng-template #suffixIconSearch>
+          <button nz-button nzType="text" nzSearch><span nz-icon nzType="search"></span></button>
+        </ng-template>
+      </div>
+    </div>
+  </nz-col>
+  <nz-col [nzSpan]="24">
+    <nz-table
+  [nzData]="listOfRandomUser"
+  [nzLoading]="loading"
+  [nzPageSize]="pageSize"
+  [nzPageIndex]="pageIndex"
+>
+  <thead>
+    <tr>
+      <th nzColumnKey="name" [nzSortFn]="true">Name</th>
+      <th nzColumnKey="gender" [nzSortFn]="true">Gender</th>
+      <th nzColumnKey="email" [nzSortFn]="true">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of listOfRandomUser">
+      <td>{{ data.name.first }} {{ data.name.last }}</td>
+      <td>{{ data.gender }}</td>
+      <td>{{ data.email }}</td>
+    </tr>
+  </tbody>
+</nz-table>
+  </nz-col>
+</nz-row>
