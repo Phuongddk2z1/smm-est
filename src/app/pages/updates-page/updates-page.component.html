@@ -1,6 +1,6 @@
 <nz-row [nzGutter]="[24,28]">
   <nz-col [nzSpan]="12">
-    <div class="item-total flex-update">
+    <div class="item-total flex-column">
       <div class="icon">
         <span class="material-symbols-outlined">
           all_inbox
@@ -11,7 +11,7 @@
 
   </nz-col>
   <nz-col [nzSpan]="12">
-    <div class="item-total flex-update">
+    <div class="item-total flex-column">
       <div class="icon">
         <span class="material-symbols-outlined">
           book
@@ -19,10 +19,9 @@
       </div>
       <nz-statistic [nzValue]="(3884 | number: '1.0-2')!" [nzTitle]="'Available Services'"></nz-statistic>
     </div>
-
   </nz-col>
   <nz-col [nzSpan]="24">
-    <div class="flex-update">
+    <div class="flex-column">
       <div class="filter-search">
         <nz-select ngModel="lucy" [(ngModel)]="optionSearch" [nzSize]="sizeBt">
           <nz-option nzValue="all" nzLabel="All"></nz-option>

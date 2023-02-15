@@ -91,3 +91,25 @@ nz-content {
 }
 
 
+// ant-statistic
+
+::ng-deep .ant-statistic {
+  display: grid;
+  text-align: center;
+  .ant-statistic-title {
+    order: 2;
+    margin-bottom: 0;
+    font-size: 20px;
+      color: #fff;
+  }
+  .ant-statistic-content {
+    order: 1;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #ff8355;
+    text-align: left;
+  }
+}
+
+// end ant-statistic

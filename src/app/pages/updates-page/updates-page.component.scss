@@ -1,54 +1,5 @@
 
-.flex-update {
-  display: flex;
-  align-items: center;
-}
 
-.item-total {
-  background: #373539;
-    border-radius: 8px;
-    box-shadow: 0px 2px 4px 0px rgb(25 25 25 / 12%);
-    padding: 12px;
-  .icon {
-    padding: 12px 20px;
-    background: #4b3d3c;
-    border-radius: 8px;
-    margin-right: 12px;
-    span {
-      font-size: 50px;
-      color: #ff8355;
-    }
-  }
-  ::ng-deep nz-statistic {
-    .ant-statistic {
-      .ant-statistic-title {
-        font-size: 20px;
-        color: #fff;
-      }
-      .ant-statistic-content {
-        font-size: 24px;
-        line-height: 24px;
-        font-weight: bold;
-        color: #ff8355;
-        text-align: left;
-      }
-    }
-  }
-}
-
-// ant-statistic
-::ng-deep .ant-statistic {
-  display: grid;
-  text-align: center;
-  .ant-statistic-title {
-    order: 2;
-    margin-bottom: 0;
-  }
-  .ant-statistic-content {
-    order: 1;
-  }
-}
-// end ant-statistic
 
 .filter-search {
   margin-right: 12px;

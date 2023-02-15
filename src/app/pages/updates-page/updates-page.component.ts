@@ -59,10 +59,6 @@ export class UpdatesPageComponent implements OnInit {
   loading = true;
   pageSize = 10;
   pageIndex = 1;
-  filterGender = [
-    { text: 'male', value: 'male' },
-    { text: 'female', value: 'female' }
-  ];
 
   loadDataFromServer(
     pageIndex: number,

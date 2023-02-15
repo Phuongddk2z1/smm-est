@@ -1,0 +1,161 @@
+<nz-row [nzGutter]="[24, 28]">
+  <nz-col [nzSpan]="12">
+    <form
+      nz-form
+      [formGroup]="validateForm"
+      class="login-form"
+      (ngSubmit)="submitForm()"
+      [nzLayout]="'vertical'"
+      class="form-login"
+    >
+      <nz-form-item>
+        <nz-form-label nzFor="category"
+          >Category</nz-form-label
+        >
+        <nz-form-control>
+          <nz-select formControlName="category">
+            <nz-option nzValue="male" nzLabel="male"></nz-option>
+            <nz-option nzValue="female" nzLabel="female"></nz-option>
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label nzFor="service"
+          >Service ( Price / 1000 )</nz-form-label
+        >
+        <nz-form-control>
+          <nz-select formControlName="service">
+            <nz-option nzValue="male" nzLabel="male"></nz-option>
+            <nz-option nzValue="female" nzLabel="female"></nz-option>
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label nzFor="description"
+          >Description</nz-form-label
+        >
+        <nz-form-control>
+          <textarea
+            nz-input
+            formControlName="description"
+            [nzAutosize]="{ minRows: 4, maxRows: 8 }"
+          ></textarea>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label nzFor="link">Link</nz-form-label>
+        <nz-form-control>
+          <input type="text" nz-input formControlName="link" nzSize="large" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label nzFor="quantity"
+          >Quantity</nz-form-label
+        >
+        <nz-form-control>
+          <input
+            type="text"
+            nz-input
+            formControlName="quantity"
+            nzSize="large"
+          />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label nzFor="quantity"
+          >Quantity</nz-form-label
+        >
+        <nz-form-control>
+          <input
+            type="text"
+            nz-input
+            formControlName="quantity"
+            nzSize="large"
+          />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control>
+          <label nz-checkbox formControlName="dripFeed">
+            <span>Drip-feed</span>
+          </label>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label nzFor="averageTime"
+
+        nzTooltipTitle="Please click 'Get captcha'"
+          [nzTooltipIcon]="captchaTooltipIcon"
+          >Average time to complete</nz-form-label
+        >
+        <nz-form-control>
+          <input
+            type="text"
+            nz-input
+            formControlName="averageTime"
+            nzSize="large"
+          />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label nzFor="charge"
+          >Charge</nz-form-label
+        >
+        <nz-form-control>
+          <input
+            type="text"
+            nz-input
+            formControlName="charge"
+            nzSize="large"
+          />
+        </nz-form-control>
+      </nz-form-item>
+      <button
+        nz-button
+        class="order-form-button login-form-margin"
+        [nzType]="'primary'"
+        nzSize="large"
+      >
+        Submit
+      </button>
+    </form>
+  </nz-col>
+  <nz-col [nzSpan]="12">
+    <div class="log-order">
+      <ng-template ngFor
+      [ngForOf]="dataLog"
+      let-item
+     >
+        <p  nz-typography>{{item.date}} </p>
+        <p  nz-typography>{{item.title}} </p>
+        <p  nz-typography>- {{item.option}} </p>
+
+      </ng-template>
+
+    </div>
+  </nz-col>
+</nz-row>
+<nz-row [nzGutter]="[24, 28]">
+  <nz-col [nzSpan]="12">
+    <div class="item-total flex-column">
+      <div class="icon">
+        <span class="material-symbols-outlined"> all_inbox </span>
+      </div>
+      <nz-statistic
+        [nzValue]="(10806856 | number)!"
+        [nzTitle]="'Total Orders'"
+      ></nz-statistic>
+    </div>
+  </nz-col>
+  <nz-col [nzSpan]="12">
+    <div class="item-total flex-column">
+      <div class="icon">
+        <span class="material-symbols-outlined"> book </span>
+      </div>
+      <nz-statistic
+        [nzValue]="(3884 | number : '1.0-2')!"
+        [nzTitle]="'Available Services'"
+      ></nz-statistic>
+    </div>
+  </nz-col>
+</nz-row>
