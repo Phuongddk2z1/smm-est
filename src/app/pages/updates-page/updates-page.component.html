@@ -1,0 +1,70 @@
+<nz-row [nzGutter]="[24,28]">
+  <nz-col [nzSpan]="12">
+    <div class="item-total flex-update">
+      <div class="icon">
+        <span class="material-symbols-outlined">
+          all_inbox
+        </span>
+      </div>
+      <nz-statistic [nzValue]="(10806856 | number)!" [nzTitle]="'Total Orders'"></nz-statistic>
+    </div>
+
+  </nz-col>
+  <nz-col [nzSpan]="12">
+    <div class="item-total flex-update">
+      <div class="icon">
+        <span class="material-symbols-outlined">
+          book
+          </span>
+      </div>
+      <nz-statistic [nzValue]="(3884 | number: '1.0-2')!" [nzTitle]="'Available Services'"></nz-statistic>
+    </div>
+
+  </nz-col>
+  <nz-col [nzSpan]="24">
+    <div class="flex-update">
+      <div class="filter-search">
+        <nz-select ngModel="lucy" [(ngModel)]="optionSearch" [nzSize]="sizeBt">
+          <nz-option nzValue="all" nzLabel="All"></nz-option>
+          <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+          <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+        </nz-select>
+      </div>
+      <div class="input-search" >
+        <nz-input-group [nzSuffix]="suffixIconSearch" [nzSize]="sizeBt" >
+          <input type="text" nz-input placeholder="input search text" />
+        </nz-input-group>
+        <ng-template #suffixIconSearch>
+          <button nz-button nzType="text" nzSearch><span nz-icon nzType="search"></span></button>
+        </ng-template>
+      </div>
+    </div>
+  </nz-col>
+  <nz-col [nzSpan]="24">
+    <nz-table
+      nzShowSizeChanger
+      [nzData]="listOfRandomUser"
+      [nzFrontPagination]="false"
+      [nzLoading]="loading"
+      [nzTotal]="total"
+      [nzPageSize]="pageSize"
+      [nzPageIndex]="pageIndex"
+      (nzQueryParams)="onQueryParamsChange($event)"
+    >
+      <thead>
+        <tr>
+          <th nzColumnKey="name" [nzSortFn]="true">Name</th>
+          <th nzColumnKey="gender" [nzSortFn]="true">Gender</th>
+          <th nzColumnKey="email" [nzSortFn]="true">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of listOfRandomUser">
+          <td>{{ data.name.first }} {{ data.name.last }}</td>
+          <td>{{ data.gender }}</td>
+          <td>{{ data.email }}</td>
+        </tr>
+      </tbody>
+    </nz-table>
+  </nz-col>
+</nz-row>
