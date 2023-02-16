@@ -1,6 +1,11 @@
 .filter-search {
   margin-right: 12px;
 }
-.input-search {
+.input-search, .bt-create-order {
   width: 100%;
+}
+
+
+::ng-deep .ant-modal-footer {
+  border-top: none;
 }

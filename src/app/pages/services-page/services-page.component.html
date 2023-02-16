@@ -32,6 +32,7 @@
       <th nzColumnKey="name" [nzSortFn]="true">Name</th>
       <th nzColumnKey="gender" [nzSortFn]="true">Gender</th>
       <th nzColumnKey="email" [nzSortFn]="true">Email</th>
+      <th>Action</th>
     </tr>
   </thead>
   <tbody>
@@ -39,8 +40,28 @@
       <td>{{ data.name.first }} {{ data.name.last }}</td>
       <td>{{ data.gender }}</td>
       <td>{{ data.email }}</td>
+      <td> <button nz-button nzType="primary" (click)="openModalView()" >View</button></td>
     </tr>
   </tbody>
 </nz-table>
   </nz-col>
 </nz-row>
+
+<nz-modal [(nzVisible)]="isVisible" nzTitle="" (nzOnCancel)="handleCancel()" [nzFooter]="modalFooter">
+  <ng-container *nzModalContent>
+    <h3>🌐 Rumble.com Video Views [Real & Active] [Worldwide] 🛑
+      ★ Rumble.com - Worldwide Views</h3>
+
+    <p> ⏱ Estimated Start: 30 Minutes</p>
+    <p>⚡ Speed 5,000+ Views per day</p>
+    <p>🔐 Non-Drop</p>
+    <p>✔️ Views may include REAL User Engagements!</p>
+    <p>- Link Format:</p>
+    <p>https://rumble.com/vrhf44-playful-sea-lion-acts-jealous-when-marine-iguana-gets-attention.html</p>
+    <p>🛑 Cancel Button Available  </p>
+
+  </ng-container>
+  <ng-template #modalFooter>
+    <button class="bt-create-order" nz-button nzType="primary" (click)="handleOk()" [nzLoading]="isConfirmLoading">Create Order</button>
+  </ng-template>
+</nz-modal>

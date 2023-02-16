@@ -51,6 +51,8 @@ export class RandomUserService {
 export class ServicesPageComponent implements OnInit {
   sizeBt: NzButtonSize = 'large';
   optionSearch: string = 'all'
+  isVisible = false;
+  isConfirmLoading = false;
 
   listOfRandomUser: RandomUser[] = [];
   pageSize = 200;
@@ -78,6 +80,20 @@ export class ServicesPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadDataFromServer(this.pageIndex, this.pageSize, null, null, []);
+  }
+
+
+  openModalView(): void{
+    this.isVisible = true;
+  }
+
+
+  handleCancel(): void {
+    this.isVisible = false;
+  }
+
+  handleOk(): void {
+
   }
 
 }
