@@ -1,6 +1,7 @@
 <nz-row [nzGutter]="[24, 28]">
   <nz-col [nzSpan]="12">
-    <form
+    <div class="colum-bgr">
+      <form
       nz-form
       [formGroup]="validateForm"
       class="login-form"
@@ -13,7 +14,7 @@
           >Category</nz-form-label
         >
         <nz-form-control>
-          <nz-select formControlName="category">
+          <nz-select formControlName="category" nzSize="large">
             <nz-option nzValue="male" nzLabel="male"></nz-option>
             <nz-option nzValue="female" nzLabel="female"></nz-option>
           </nz-select>
@@ -24,7 +25,7 @@
           >Service ( Price / 1000 )</nz-form-label
         >
         <nz-form-control>
-          <nz-select formControlName="service">
+          <nz-select formControlName="service" nzSize="large">
             <nz-option nzValue="male" nzLabel="male"></nz-option>
             <nz-option nzValue="female" nzLabel="female"></nz-option>
           </nz-select>
@@ -46,19 +47,6 @@
         <nz-form-label nzFor="link">Link</nz-form-label>
         <nz-form-control>
           <input type="text" nz-input formControlName="link" nzSize="large" />
-        </nz-form-control>
-      </nz-form-item>
-      <nz-form-item>
-        <nz-form-label nzFor="quantity"
-          >Quantity</nz-form-label
-        >
-        <nz-form-control>
-          <input
-            type="text"
-            nz-input
-            formControlName="quantity"
-            nzSize="large"
-          />
         </nz-form-control>
       </nz-form-item>
       <nz-form-item>
@@ -112,32 +100,38 @@
       </nz-form-item>
       <button
         nz-button
-        class="button-submit-from login-form-margin"
+        class="button-submit-from"
         [nzType]="'primary'"
         nzSize="large"
       >
         Submit
       </button>
     </form>
-  </nz-col>
-  <nz-col [nzSpan]="12">
-    <div class="log-order">
-      <ng-template ngFor
-      [ngForOf]="dataLog"
-      let-item
-     >
-        <p  nz-typography>{{item.date}} </p>
-        <p  nz-typography>{{item.title}} </p>
-        <p  nz-typography>- {{item.option}} </p>
-
-      </ng-template>
 
     </div>
+
+  </nz-col>
+  <nz-col [nzSpan]="12">
+    <div class="colum-bgr">
+      <div class="log-order">
+        <ng-template ngFor
+        [ngForOf]="dataLog"
+        let-item
+       >
+          <p  nz-typography>{{item.date}} </p>
+          <p  nz-typography>{{item.title}} </p>
+          <p  nz-typography>- {{item.option}} </p>
+
+        </ng-template>
+
+      </div>
+    </div>
+
   </nz-col>
 </nz-row>
 <nz-row [nzGutter]="[24, 28]">
   <nz-col [nzSpan]="12">
-    <div class="item-total flex-column">
+    <div class="colum-bgr flex-column">
       <div class="icon">
         <span class="material-symbols-outlined"> all_inbox </span>
       </div>
@@ -148,7 +142,7 @@
     </div>
   </nz-col>
   <nz-col [nzSpan]="12">
-    <div class="item-total flex-column">
+    <div class="colum-bgr flex-column">
       <div class="icon">
         <span class="material-symbols-outlined"> book </span>
       </div>

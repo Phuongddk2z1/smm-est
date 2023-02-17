@@ -7,23 +7,27 @@
 
 .menu-sidebar {
   position: relative;
-    z-index: 10;
-    box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
-    height: 100vh;
-    position: sticky;
-    top: 0;
+  z-index: 10;
+  box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+  height: 100vh;
+  position: sticky;
+  top: 0;
 }
+
+// .ant-layout {
+//   background: #252427;
+// }
 
 .header-trigger {
   height: 64px;
   padding: 20px 24px;
   font-size: 20px;
   cursor: pointer;
-  transition: all .3s,padding 0s;
+  transition: all 0.3s, padding 0s;
 }
 
 .trigger:hover {
-  color: #1890ff;
+  color: #ff8355;
 }
 
 .sidebar-logo {
@@ -33,7 +37,7 @@
   overflow: hidden;
   line-height: 64px;
   background: #001529;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .sidebar-logo img {
@@ -49,7 +53,7 @@
   color: #fff;
   font-weight: 600;
   font-size: 14px;
-  font-family: Avenir,Helvetica Neue,Arial,Helvetica,sans-serif;
+  font-family: Avenir, Helvetica Neue, Arial, Helvetica, sans-serif;
   vertical-align: middle;
 }
 
@@ -57,26 +61,51 @@ nz-header {
   padding: 0;
   width: 100%;
   z-index: 2;
+  background: #373539;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 4%);
+  color: #fff;
 }
 
+::ng-deep nz-select.ant-select.filter-select {
+  color: #fff;
+  nz-select-top-control.ant-select-selector {
+    background-color: #ff8355 !important;
+    border: none !important;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 12px !important;
+    height: unset !important;
+    border-radius: 8px !important;
+  }
+  .ant-select-arrow {
+    color: #fff;
+    font-size: 16px;
+  }
+}
+
+a {
+  color: #fff;
+}
+a:hover {
+  color: #ff8355;
+}
 .app-header {
   position: relative;
   height: 64px;
   padding: 0;
-  background: #fff;
-  box-shadow: 0 1px 4px rgba(0,21,41,.08);
   display: flex;
 }
 
 nz-content {
-  margin: 24px;
+  padding: 24px;
+  background: #252427;
 }
 
-.inner-content {
-  padding: 24px;
-  background: #fff;
-  height: 100%;
-}
+// .inner-content {
+//   padding: 24px;
+//   background: #fff;
+//   height: 100%;
+// }
 
 .flex-header {
   flex: 1;
@@ -90,9 +119,7 @@ nz-content {
   }
 }
 
-
 // ant-statistic
-
 ::ng-deep .ant-statistic {
   display: grid;
   text-align: center;
@@ -100,7 +127,7 @@ nz-content {
     order: 2;
     margin-bottom: 0;
     font-size: 20px;
-      color: #fff;
+    color: #fff;
   }
   .ant-statistic-content {
     order: 1;
@@ -111,5 +138,85 @@ nz-content {
     text-align: left;
   }
 }
-
 // end ant-statistic
+
+nz-input-group {
+  input {
+    padding: 5px 12px;
+  }
+}
+
+::ng-deep nz-input-group.ant-input-affix-wrapper:hover,
+::ng-deep nz-input-group.ant-input-affix-wrapper-lg {
+  border: none;
+  padding: 0;
+  border-radius: 8px;
+  background-color: #252427;
+  color: #fff;
+  border-color: unset !important;
+  box-shadow: unset !important;
+  input {
+    padding: 5px 12px !important;
+    height: 46px;
+    border-radius: 8px !important;
+    background-color: #252427;
+    color: #fff;
+  }
+}
+
+::ng-deep
+  nz-input-group.ant-input-affix-wrapper:not(
+    .ant-input-affix-wrapper-disabled
+  ):hover {
+  border: none;
+  z-index: 1;
+  padding: 0;
+  border-radius: 8px;
+  background-color: #252427;
+  color: #fff;
+  input {
+    padding: 5px 12px;
+    height: 46px;
+    border-radius: 8px !important;
+    background-color: #252427;
+    color: #fff;
+  }
+}
+
+::ng-deep .ant-form-item-label > label {
+  font-weight: 700;
+  font-style: normal;
+  color: #ffffff;
+}
+
+::ng-deep .ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border-color: unset;
+
+  color: #fff;
+}
+::ng-deep .ant-select:not(.filter-select),
+::ng-deep .ant-input {
+  border-color: unset;
+  background-color: #252427;
+  color: #fff;
+  border: unset !important;
+  box-shadow: unset !important;
+}
+
+::ng-deep .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  background-color: #252427;
+  border: unset;
+}
+
+::ng-deep
+  .ant-select-focused:not(.ant-select-disabled).ant-select:not(
+    .ant-select-customize-input
+  )
+  .ant-select-selector {
+  border: unset;
+  box-shadow: unset;
+}
+
+
+
+

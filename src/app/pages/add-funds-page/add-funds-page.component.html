@@ -1,6 +1,7 @@
 <nz-row [nzGutter]="[24, 28]">
   <nz-col [nzSpan]="24">
-    <form
+    <div class="colum-bgr">
+      <form
       nz-form
       [formGroup]="validateForm"
       class="login-form"
@@ -13,7 +14,7 @@
           >Method</nz-form-label
         >
         <nz-form-control>
-          <nz-select formControlName="method">
+          <nz-select  nzSize="large" formControlName="method">
             <nz-option nzValue="male" nzLabel="male"></nz-option>
             <nz-option nzValue="female" nzLabel="female"></nz-option>
           </nz-select>
@@ -39,33 +40,38 @@
       </nz-form-item>
       <button
         nz-button
-        class="button-submit-from login-form-margin"
+        class="button-submit-from"
         [nzType]="'primary'"
         nzSize="large"
       >
         Submit
       </button>
     </form>
+    </div>
+
   </nz-col>
   <nz-col [nzSpan]="24">
-    <nz-table #basicTable [nzData]="dataSet">
-      <thead>
-        <tr>
-          <th>Subject</th>
-          <th>Last reply</th>
-          <th>Status</th>
-          <th>View detail</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let data of basicTable.data">
-          <td>{{data.name}}</td>
-          <td>{{data.age}}</td>
-          <td>{{data.address}}</td>
-          <td>{{data.address}}</td>
-        </tr>
-      </tbody>
-    </nz-table>
+    <div class="colum-bgr">
+      <nz-table #basicTable [nzData]="dataSet">
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Last reply</th>
+            <th>Status</th>
+            <th>View detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of basicTable.data">
+            <td>{{data.name}}</td>
+            <td>{{data.age}}</td>
+            <td>{{data.address}}</td>
+            <td>{{data.address}}</td>
+          </tr>
+        </tbody>
+      </nz-table>
+    </div>
+
   </nz-col>
 
 </nz-row>

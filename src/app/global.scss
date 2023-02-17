@@ -1,0 +1,32 @@
+button.ant-btn.bt-search {
+  width: 46px;
+  height: 100%;
+  padding: 0;
+  color: #ff8355;
+}
+
+.filter-search, .input-search {
+  padding: 0  15px;
+}
+.input-search {
+  width: 100%;
+}
+
+[nz-button].button-submit-from, [nz-button].button-view, [nz-button].bt-create-order,
+.ant-btn-primary:focus,
+.ant-btn-primary:hover {
+  text-shadow: unset;
+  box-shadow: unset;
+  color: #ffffff;
+  background: rgba(255, 131, 85, 0.9);
+  border-color: #ea5923;
+  border-radius: 8px;
+}
+.ant-checkbox-wrapper,
+.ant-typography {
+  color: #fff;
+}
+::ng-deep .ant-modal-close-x {
+  color: #ff8355;
+  font-size: 24px;
+}

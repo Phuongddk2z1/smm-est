@@ -1,22 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
 }
 
-.item-total {
+.colum-bgr {
   background: #373539;
-    border-radius: 8px;
-    box-shadow: 0px 2px 4px 0px rgb(25 25 25 / 12%);
-    padding: 12px;
-  .icon {
-    padding: 12px 20px;
-    background: #4b3d3c;
-    border-radius: 8px;
-    margin-right: 12px;
-    span {
-      font-size: 50px;
-      color: #ff8355;
-    }
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px 0px rgb(25 25 25 / 12%);
+  padding: 12px;
+}
+
+.icon {
+  padding: 12px 20px;
+  background: #4b3d3c;
+  border-radius: 8px;
+  margin-right: 12px;
+  span {
+    font-size: 50px;
+    color: #ff8355;
   }
 }
 
@@ -27,4 +29,60 @@ body {
 
 .button-submit-from {
   width: 100%;
+}
+.ant-table,
+.ant-table.ant-table-middle,
+.ant-table.ant-table-small {
+  color: #fff;
+  background: #373539;
+  .ant-table-tbody > tr > td {
+    border-color: #ff8355;
+  }
+  .ant-table-footer,
+  .ant-table-thead > tr > th {
+    color: #fff;
+    background: #424044;
+    border: none;
+  }
+}
+
+.ant-table-tbody > tr.ant-table-row:hover > td,
+.ant-table-tbody > tr > td.ant-table-cell-row-hover {
+  background: #424044;
+}
+
+.ant-pagination-jump-next
+  .ant-pagination-item-container
+  .ant-pagination-item-link-icon,
+.ant-pagination-jump-prev
+  .ant-pagination-item-container
+  .ant-pagination-item-link-icon,
+.ant-pagination-item-active a,
+.ant-pagination-item-active a,
+.ant-pagination-item:focus-visible a,
+.ant-pagination-item:hover a {
+  color: #ff8355;
+}
+.ant-pagination-item-active,
+.ant-pagination-item-active:hover a,
+.ant-pagination-item:focus-visible,
+.ant-pagination-item:hover {
+  border-color: #ff8355;
+}
+
+.ant-pagination-next:focus-visible .ant-pagination-item-link,
+.ant-pagination-next:hover .ant-pagination-item-link,
+.ant-pagination-prev:focus-visible .ant-pagination-item-link,
+.ant-pagination-prev:hover .ant-pagination-item-link {
+  color: #ff8355;
+  border-color: #ff8355;
+}
+
+.ant-pagination-jump-next
+  .ant-pagination-item-container
+  .ant-pagination-item-ellipsis,
+.ant-pagination-jump-prev
+  .ant-pagination-item-container
+  .ant-pagination-item-ellipsis {
+  color: rgba(255, 255, 255, 0.25);
 }
