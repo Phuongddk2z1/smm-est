@@ -34,13 +34,11 @@
         </nz-select>
       </div>
       <div class="input-search">
-        <nz-input-group [nzSuffix]="suffixIconSearch" [nzSize]="sizeBt">
+        <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton" [nzSize]="sizeBt">
           <input type="text" nz-input placeholder="search" />
         </nz-input-group>
-        <ng-template #suffixIconSearch>
-          <button nz-button nzType="text" nzSearch class="bt-search" >
-            <span nz-icon nzType="search"></span>
-          </button>
+        <ng-template #suffixIconButton>
+          <button nz-button nzType="primary" nzSearch class="bt-search"><span nz-icon nzType="search"></span></button>
         </ng-template>
       </div>
     </div>

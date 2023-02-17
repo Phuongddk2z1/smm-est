@@ -73,7 +73,7 @@ nz-header {
     border: none !important;
     font-size: 16px;
     font-weight: 500;
-    padding: 5px 12px !important;
+    // padding: 5px 12px !important;
     height: unset !important;
     border-radius: 8px !important;
   }
@@ -149,37 +149,29 @@ nz-input-group {
 ::ng-deep nz-input-group.ant-input-affix-wrapper:hover,
 ::ng-deep nz-input-group.ant-input-affix-wrapper-lg {
   border: none;
-  padding: 0;
+  // padding: 0;
   border-radius: 8px;
   background-color: #252427;
   color: #fff;
   border-color: unset !important;
   box-shadow: unset !important;
   input {
-    padding: 5px 12px !important;
-    height: 46px;
     border-radius: 8px !important;
     background-color: #252427;
     color: #fff;
   }
 }
-
-::ng-deep
-  nz-input-group.ant-input-affix-wrapper:not(
-    .ant-input-affix-wrapper-disabled
-  ):hover {
-  border: none;
-  z-index: 1;
-  padding: 0;
+::ng-deep .ant-input-affix-wrapper-status-error:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper {
+  background: #252427 !important;
+}
+::ng-deep .ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input, .ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover {
+  background: #252427 !important;
+}
+::ng-deep nz-input-group.ant-input-group-wrapper {
   border-radius: 8px;
-  background-color: #252427;
-  color: #fff;
-  input {
-    padding: 5px 12px;
-    height: 46px;
-    border-radius: 8px !important;
-    background-color: #252427;
-    color: #fff;
+  .ant-input-group input {
+    height: 40px;
+    border-radius: 8px 0 0 8px;
   }
 }
 
@@ -216,7 +208,3 @@ nz-input-group {
   border: unset;
   box-shadow: unset;
 }
-
-
-
-
