@@ -14,41 +14,36 @@
       </a>
     </div>
     <ul
-      nz-menu
-      nzTheme="dark"
+    nz-menu
       nzMode="inline"
-      [nzInlineCollapsed]="isCollapsed"
+      nzTheme="dark"
     >
-      <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard">
-        <ul>
-          <li nz-menu-item nzMatchRouter routerLink="/updates" nzSelected>
-            <span nz-icon nzType="swap" nzTheme="outline"></span>
-            <span>Updates</span>
-          </li>
-          <li nz-menu-item nzMatchRouter routerLink="/orders" nzSelected>
-            <span nz-icon nzType="rise" nzTheme="outline"></span>
-            <span>Orders</span>
-          </li>
-          <li nz-menu-item nzMatchRouter routerLink="/services" nzSelected>
-            <span nz-icon nzType="cloud-server" nzTheme="outline"></span>
-            <span>Services</span>
-          </li>
-          <li nz-menu-item nzMatchRouter routerLink="/terms" nzSelected>
-            <span nz-icon nzType="warning" nzTheme="outline"></span>
-            <span>Terms</span>
-          </li>
-          <li nz-menu-item nzMatchRouter routerLink="/support" nzSelected>
-            <span nz-icon nzType="user-switch" nzTheme="outline"></span>
-            <span>Support</span>
-          </li>
-          <li nz-menu-item nzMatchRouter routerLink="/addfunds" nzSelected>
-            <span nz-icon nzType="dollar" nzTheme="outline"></span>
-            <span>Balance</span>
-          </li>
-          <li nz-menu-item nzMatchRouter>
-            <a routerLink="/welcome">API</a>
-          </li>
-        </ul>
+      <li nz-menu-item nzMatchRouter routerLink="/updates" nzSelected>
+        <span nz-icon nzType="swap" nzTheme="outline"></span>
+        <span>Updates</span>
+      </li>
+      <li nz-menu-item nzMatchRouter routerLink="/orders" nzSelected>
+        <span nz-icon nzType="rise" nzTheme="outline"></span>
+        <span>Orders</span>
+      </li>
+      <li nz-menu-item nzMatchRouter routerLink="/services" nzSelected>
+        <span nz-icon nzType="cloud-server" nzTheme="outline"></span>
+        <span>Services</span>
+      </li>
+      <li nz-menu-item nzMatchRouter routerLink="/terms" nzSelected>
+        <span nz-icon nzType="warning" nzTheme="outline"></span>
+        <span>Terms</span>
+      </li>
+      <li nz-menu-item nzMatchRouter routerLink="/support" nzSelected>
+        <span nz-icon nzType="user-switch" nzTheme="outline"></span>
+        <span>Support</span>
+      </li>
+      <li nz-menu-item nzMatchRouter routerLink="/addfunds" nzSelected>
+        <span nz-icon nzType="dollar" nzTheme="outline"></span>
+        <span>Balance</span>
+      </li>
+      <li nz-menu-item nzMatchRouter>
+        <a routerLink="/welcome">API</a>
       </li>
     </ul>
   </nz-sider>

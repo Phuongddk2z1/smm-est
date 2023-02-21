@@ -30,6 +30,9 @@ export class AccountPageComponent implements OnInit {
       currentPassword: [null],
       password: [null],
       checkPassword: [null,[ this.confirmationValidator]],
+      language: ['en'],
+      timezone: ['en'],
+      apiKey: [null],
     });
   }
 

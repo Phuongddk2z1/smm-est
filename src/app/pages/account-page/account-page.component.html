@@ -150,6 +150,83 @@
         >
           Submit
         </button>
+        <nz-row [nzGutter]="[24, 28]">
+          <nz-col [nzSpan]="22">
+            <nz-form-item>
+              <nz-form-label nzFor="language"
+                >Language</nz-form-label
+              >
+              <nz-form-control>
+                <nz-select formControlName="language" nzSize="large">
+                  <nz-option nzValue="en" nzLabel="English US"></nz-option>
+                  <nz-option nzValue="vi" nzLabel="VN"></nz-option>
+                </nz-select>
+              </nz-form-control>
+            </nz-form-item>
+          </nz-col>
+          <nz-col [nzSpan]="2">
+            <button
+          nz-button
+          class="button-submit-from"
+          [nzType]="'primary'"
+          nzSize="large"
+        >
+          Save
+        </button>
+          </nz-col>
+        </nz-row>
+        <nz-row [nzGutter]="[24, 28]">
+          <nz-col [nzSpan]="22">
+            <nz-form-item>
+              <nz-form-label nzFor="timezone"
+                >Timezone</nz-form-label
+              >
+              <nz-form-control>
+                <nz-select formControlName="timezone" nzSize="large">
+                  <nz-option nzValue="en" nzLabel="English US"></nz-option>
+                  <nz-option nzValue="vi" nzLabel="VN"></nz-option>
+                </nz-select>
+              </nz-form-control>
+            </nz-form-item>
+          </nz-col>
+          <nz-col [nzSpan]="2">
+            <button
+          nz-button
+          class="button-submit-from"
+          [nzType]="'primary'"
+          nzSize="large"
+        >
+          Save
+        </button>
+          </nz-col>
+        </nz-row>
+        <nz-row [nzGutter]="[24, 28]">
+          <nz-col [nzSpan]="20">
+            <nz-form-item>
+              <nz-form-label nzFor="apiKey"
+                >API key</nz-form-label
+              >
+              <nz-form-control>
+                <input
+              type="text"
+              nz-input
+              formControlName="apiKey"
+              nzSize="large"
+            />
+              </nz-form-control>
+            </nz-form-item>
+          </nz-col>
+          <nz-col [nzSpan]="4">
+            <button
+          nz-button
+          class="button-submit-from"
+          [nzType]="'primary'"
+          nzSize="large"
+        >
+          Generate New
+        </button>
+          </nz-col>
+        </nz-row>
       </form>
     </div>
   </nz-col>
