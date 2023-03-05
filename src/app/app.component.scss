@@ -12,12 +12,16 @@
   height: 100vh;
   position: sticky;
   top: 0;
-  background: linear-gradient(90deg, rgba(25, 25, 28, 1) 0.0%,rgba(55, 53, 57, 1) 100.0%);
+  background: linear-gradient(90deg, rgba(25, 25, 28, 1) 0.0%, rgba(55, 53, 57, 1) 100.0%);
 }
+
 .ant-menu.ant-menu-dark {
-  background: linear-gradient(90deg, rgba(25, 25, 28, 1) 0.0%,rgba(55, 53, 57, 1) 100.0%);
+  background: linear-gradient(90deg, rgba(25, 25, 28, 1) 0.0%, rgba(55, 53, 57, 1) 100.0%);
 }
-.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected, .ant-menu.ant-menu-dark .ant-menu-item-selected {
+
+.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected,
+.ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected,
+.ant-menu.ant-menu-dark .ant-menu-item-selected {
   background: rgba(255, 131, 85, 0.9);
 }
 
@@ -43,7 +47,7 @@
   padding-left: 24px;
   overflow: hidden;
   line-height: 64px;
-  background: linear-gradient(90deg, rgba(25, 25, 28, 1) 0.0%,rgba(55, 53, 57, 1) 100.0%);
+  background: linear-gradient(90deg, rgba(25, 25, 28, 1) 0.0%, rgba(55, 53, 57, 1) 100.0%);
   transition: all 0.3s;
 }
 
@@ -75,6 +79,7 @@ nz-header {
 
 ::ng-deep nz-select.ant-select.filter-select {
   color: #fff;
+
   nz-select-top-control.ant-select-selector {
     background-color: #ff8355 !important;
     border: none !important;
@@ -84,6 +89,7 @@ nz-header {
     height: unset !important;
     border-radius: 8px !important;
   }
+
   .ant-select-arrow {
     color: #fff;
     font-size: 16px;
@@ -93,9 +99,11 @@ nz-header {
 a {
   color: #fff;
 }
+
 a:hover {
   color: #ff8355;
 }
+
 .app-header {
   position: relative;
   height: 64px;
@@ -118,8 +126,10 @@ nz-content {
   flex: 1;
   text-align: right;
   padding: 0 25px;
+
   .item-header {
     display: inline-block;
+
     &:not(:last-child) {
       margin-right: 30px;
     }
@@ -130,12 +140,14 @@ nz-content {
 ::ng-deep .ant-statistic {
   display: grid;
   text-align: center;
+
   .ant-statistic-title {
     order: 2;
     margin-bottom: 0;
     font-size: 20px;
     color: #fff;
   }
+
   .ant-statistic-content {
     order: 1;
     font-size: 24px;
@@ -145,6 +157,7 @@ nz-content {
     text-align: left;
   }
 }
+
 // end ant-statistic
 
 nz-input-group {
@@ -162,27 +175,33 @@ nz-input-group {
   color: #fff;
   border-color: unset !important;
   box-shadow: unset !important;
+
   input {
     border-radius: 8px !important;
     background-color: #252427;
     color: #fff;
   }
 }
+
 ::ng-deep .ant-input-affix-wrapper-status-error:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper {
   background: #252427 !important;
 }
-::ng-deep .ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input, .ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover {
+
+::ng-deep .ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input,
+.ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover {
   background: #252427 !important;
 }
+
 ::ng-deep nz-input-group.ant-input-group-wrapper {
   border-radius: 8px;
+
   .ant-input-group input {
     height: 40px;
     border-radius: 8px 0 0 8px;
   }
 }
 
-::ng-deep .ant-form-item-label > label {
+::ng-deep .ant-form-item-label>label {
   font-weight: 700;
   font-style: normal;
   color: #ffffff;
@@ -193,6 +212,7 @@ nz-input-group {
 
   color: #fff;
 }
+
 ::ng-deep .ant-select:not(.filter-select),
 ::ng-deep .ant-input {
   border-color: unset;
@@ -207,11 +227,11 @@ nz-input-group {
   border: unset;
 }
 
-::ng-deep
-  .ant-select-focused:not(.ant-select-disabled).ant-select:not(
-    .ant-select-customize-input
-  )
-  .ant-select-selector {
+::ng-deep .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
   border: unset;
   box-shadow: unset;
+}
+
+::ng-deep .ant-select-single.ant-select-open .ant-select-selection-item {
+  color: #fff;
 }

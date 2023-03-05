@@ -1,1 +1,8 @@
 @import url('../../global.scss');
+.flex-column{
+    display: flex;
+    align-items: center;
+}
+.button-change {
+    margin-bottom: 20px;
+}
